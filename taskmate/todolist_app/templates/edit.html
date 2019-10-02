@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block contant%}
+<div class="container">
+  <br>
+  <form method="POST" class="row">
+      {% csrf_token %}
+          <label class="col-lg-2"></label>
+          <input type="text" class="form-control col-lg-6" name="Task" value="{{Task_obj.Task}}">
+          <input type="hidden"  name="done" value="{{Task_obj.done}}">
+          <button type="submit" class="btn btn-primary mb-2 col-lg-1">Edit Task</button>
+  </form>
+
+</div>
+
+{%endblock%}
